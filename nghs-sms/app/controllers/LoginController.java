@@ -10,6 +10,6 @@ import views.html.loginPage;
 public class LoginController extends Controller {
 
     public Result displayLogin() {
-        return ok(loginPage.render("Please enter username and password"));
+        return ok(loginPage.render());
     }
 }
