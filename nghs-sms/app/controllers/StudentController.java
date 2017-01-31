@@ -28,7 +28,7 @@ public class StudentController extends Controller {
         return ok(studentForm.render());
     }
 
-    public Result createStudent() throws IOException {
+    public Result createStudent() {
 
         DynamicForm dynamicForm = Form.form().bindFromRequest();
         String firstName = dynamicForm.get("firstName");
@@ -43,20 +43,21 @@ public class StudentController extends Controller {
             newStudent.firstName = firstName;
             newStudent.profilePic = file;
             newStudent.save();
-
-//            Student retrievedStudent = Student.find.byId(newStudent.id);
-//            file = retrievedStudent.profilePic;
-
-            new File("assets/images/profilePic").delete();
-            org.apache.commons.io.FileUtils.moveFile(file, new File("assets/images/profilePic"));
+//            File oldFile = new File("public/images/profilePic");
+//            oldFile.delete();
+//            org.apache.commons.io.FileUtils.moveFile(file, new File("public/images/profilePic"));
             //return ok(new ByteArrayInputStream(Files.readAllBytes(file.toPath()))).as("image/jpeg");
             return ok(studentInfoPage.render(newStudent));
-            //return ok("First name: " + firstName + " File uploaded");
+//            return ok("First name: " + firstName + " File uploaded");
         } else {
             flash("error", "Missing file");
             return badRequest();
         }
+    }
 
-
+    public Result getStudentProfilePic(Long studentId) throws IOException {
+        Student student = Student.find.byId(studentId);
+        File file = student.profilePic;
+        return ok(new ByteArrayInputStream(Files.readAllBytes(file.toPath()))).as("image/jpeg");
     }
 }
