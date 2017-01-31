@@ -1,0 +1,12 @@
+@(student : Student)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>@student.firstName</title>
+</head>
+<body>
+@student.firstName
+<img src="@routes.Assets.versioned("images/profilePic")" />
+</body>
+</html>

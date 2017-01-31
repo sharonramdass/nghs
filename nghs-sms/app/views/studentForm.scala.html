@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Information Form</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+        <form action = "/createStudent" method = "post" enctype="multipart/form-data">
+
+
+            <div class="row">
+                <div class="col-sm-4">First Name</div>
+                <div class="col-sm-8"><input type = "text" name = "firstName" id ="firstName"></div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">Profile Picture</div>
+                <div class="col-sm-8"><input type = "file" name = "profilePicture" id = "profilePicture"></div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4"></div>
+                <div class="col-sm-8"><input type = "submit" ></div>
+            </div>
+        </form>
+</body>
+</html>
