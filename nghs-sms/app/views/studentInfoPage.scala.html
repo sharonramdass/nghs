@@ -7,6 +7,12 @@
 </head>
 <body>
 @student.firstName
-<img src="/student/profilePic/@student.id" />
+@student.middleName
+@student.lastName
+@student.address
+@student.DOB
+
+<img src="/student/profilePic/@student.id" width = "300" height="300" />
+<img src="/student/birthCertificate/@student.id" width = "300" height="300" />
 </body>
 </html>

@@ -3,6 +3,7 @@ body {
   background-color:#fff;
   -webkit-font-smoothing: antialiased;
   font: normal 14px Roboto,arial,sans-serif;
+  padding-top:20px;
 }
 
 .container {
@@ -31,6 +32,7 @@ h4 {
 
 .form-control {
     border-radius: 10px;
+    padding-top:20px;
 }
 
 .wrapper {
