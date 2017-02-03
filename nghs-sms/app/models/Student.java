@@ -30,6 +30,8 @@ public class Student extends Model {
     @Lob
     public File profilePic;
 
+    public Contact contact1;
+
     public static Finder<Long, Student> find = new Finder<Long,Student>(Student.class);
 
 }

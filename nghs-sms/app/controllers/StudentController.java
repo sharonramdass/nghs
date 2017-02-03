@@ -1,5 +1,6 @@
 package controllers;
 
+import models.Contact;
 import models.Student;
 import org.apache.commons.io.FilenameUtils;
 import org.h2.store.fs.FileUtils;
@@ -37,6 +38,32 @@ public class StudentController extends Controller {
         String dateOfBirth = dynamicForm.get("dateOfBirth");
         String address = dynamicForm.get("address");
 
+        //Contact1 Information
+        String contact1FirstName = dynamicForm.get("contact1FirstName");
+        String contact1LastName = dynamicForm.get("contact1astName");
+        String contact1Occupation = dynamicForm.get("contact1Occupation");
+        String contact1HomeNumber = dynamicForm.get("contact1HomeNumber");
+        String contact1MobileNumber = dynamicForm.get("contact1MobileNumber");
+        String contact1Relationship = dynamicForm.get("contact1Relationship");
+        String contact1Status = dynamicForm.get("contact1Status");
+        String contact1Company = dynamicForm.get("contact1Company");
+        String contact1Comment = dynamicForm.get("contact1Comment");
+
+        Contact contact1 = new Contact();
+        contact1.firstName = contact1FirstName;
+        contact1.lastName = contact1LastName;
+        contact1.occupation = contact1Occupation;
+        contact1.homeNumber = contact1HomeNumber;
+        contact1.mobileNumber = contact1MobileNumber;
+        contact1.relationship = contact1Relationship;
+        contact1.status = contact1Status;
+        contact1.company = contact1Company;
+        contact1.comment = contact1Comment;
+        contact1.save();
+
+
+
+
         Http.MultipartFormData<File> body = request().body().asMultipartFormData();
         Http.MultipartFormData.FilePart<File> picture1 = body.getFile("profilePicture");
         Http.MultipartFormData.FilePart<File> picture2 = body.getFile("birthCertificate");
@@ -55,6 +82,7 @@ public class StudentController extends Controller {
             newStudent.address = address;
             newStudent.profilePic = profilePicFile;
             newStudent.birthCertificate = file2;
+            newStudent.contact1 = contact1;
             newStudent.save();
 //            File oldFile = new File("public/images/profilePic");
 //            oldFile.delete();

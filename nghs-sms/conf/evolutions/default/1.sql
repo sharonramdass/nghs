@@ -3,6 +3,20 @@
 
 # --- !Ups
 
+create table contact (
+  id                            bigint auto_increment not null,
+  first_name                    varchar(255),
+  last_name                     varchar(255),
+  occupation                    varchar(255),
+  company                       varchar(255),
+  home_number                   varchar(255),
+  mobile_number                 varchar(255),
+  relationship                  varchar(255),
+  status                        varchar(255),
+  comment                       varchar(255),
+  constraint pk_contact primary key (id)
+);
+
 create table student (
   id                            bigint auto_increment not null,
   first_name                    varchar(255),
@@ -24,6 +38,8 @@ create table user (
 
 
 # --- !Downs
+
+drop table if exists contact;
 
 drop table if exists student;
 
