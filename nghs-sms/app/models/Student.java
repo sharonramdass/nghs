@@ -31,6 +31,8 @@ public class Student extends Model {
     public File profilePic;
 
     public Contact contact1;
+    public Contact contact2;
+    public Contact contact3;
 
     public static Finder<Long, Student> find = new Finder<Long,Student>(Student.class);
 

@@ -61,6 +61,51 @@ public class StudentController extends Controller {
         contact1.comment = contact1Comment;
         contact1.save();
 
+        String contact2FirstName = dynamicForm.get("contact2FirstName");
+        String contact2LastName = dynamicForm.get("contact2astName");
+        String contact2Occupation = dynamicForm.get("contact2Occupation");
+        String contact2HomeNumber = dynamicForm.get("contact2HomeNumber");
+        String contact2MobileNumber = dynamicForm.get("contact2MobileNumber");
+        String contact2Relationship = dynamicForm.get("contact2Relationship");
+        String contact2Status = dynamicForm.get("contact2Status");
+        String contact2Company = dynamicForm.get("contact2Company");
+        String contact2Comment = dynamicForm.get("contact2Comment");
+
+        Contact contact2 = new Contact();
+        contact2.firstName = contact2FirstName;
+        contact2.lastName = contact2LastName;
+        contact2.occupation = contact2Occupation;
+        contact2.homeNumber = contact2HomeNumber;
+        contact2.mobileNumber = contact2MobileNumber;
+        contact2.relationship = contact2Relationship;
+        contact2.status = contact2Status;
+        contact2.company = contact2Company;
+        contact2.comment = contact2Comment;
+        contact2.save();
+
+        String contact3FirstName = dynamicForm.get("contact3FirstName");
+        String contact3LastName = dynamicForm.get("contact3astName");
+        String contact3Occupation = dynamicForm.get("contact3Occupation");
+        String contact3HomeNumber = dynamicForm.get("contact3HomeNumber");
+        String contact3MobileNumber = dynamicForm.get("contact3MobileNumber");
+        String contact3Relationship = dynamicForm.get("contact3Relationship");
+        String contact3Status = dynamicForm.get("contact3Status");
+        String contact3Company = dynamicForm.get("contact3Company");
+        String contact3Comment = dynamicForm.get("contact3Comment");
+
+        Contact contact3 = new Contact();
+        contact3.firstName = contact3FirstName;
+        contact3.lastName = contact3LastName;
+        contact3.occupation = contact3Occupation;
+        contact3.homeNumber = contact3HomeNumber;
+        contact3.mobileNumber = contact3MobileNumber;
+        contact3.relationship = contact3Relationship;
+        contact3.status = contact3Status;
+        contact3.company = contact3Company;
+        contact3.comment = contact3Comment;
+        contact3.save();
+
+
 
 
 
@@ -83,6 +128,8 @@ public class StudentController extends Controller {
             newStudent.profilePic = profilePicFile;
             newStudent.birthCertificate = file2;
             newStudent.contact1 = contact1;
+            newStudent.contact2 = contact2;
+            newStudent.contact3 = contact3;
             newStudent.save();
 //            File oldFile = new File("public/images/profilePic");
 //            oldFile.delete();

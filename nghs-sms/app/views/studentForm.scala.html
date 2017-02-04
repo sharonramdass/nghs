@@ -13,6 +13,8 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+
+
 </head>
 <body>
         <form action = "/createStudent" method = "post" enctype="multipart/form-data" class="form-horizontal">
@@ -67,14 +69,15 @@
                                             <textarea class="form-control" id="address" name="address" placeholder="Please enter your message here..." rows="5"></textarea>
                                         </div>
                                     </div>
-                                    <legend class="text-center">Contact Information</legend>
-                                    <div class="form-group">
-                                        <label class="col-md-3 control-label" for="contact1FirstName">Contact First Name</label>
-                                        <div class="col-md-9">
-                                            <input type = "text" name = "contact1FirstName" id = "contact1FirstName" class="form-control">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
+                                    <!-- Contact 1 input-->
+                                                <legend class="text-center" >Contact 1 Information </legend>
+                                                    <div class="form-group">
+                                                        <label class="col-md-3 control-label" for="contact1FirstName">Contact First Name</label>
+                                                            <div class="col-md-9">
+                                                                <input type = "text" name = "contact1FirstName" id = "contact1FirstName" class="form-control">
+                                                             </div>
+                                                    </div>
+                                        <div class="form-group">
                                         <label class="col-md-3 control-label" for="contact1LastName">Contact Last Name</label>
                                         <div class="col-md-9">
                                             <input type = "text" name = "contact1LastName" id = "contact1LastName" class="form-control">
@@ -95,13 +98,14 @@
                                         <label class="col-md-3 control-label" for="contact1Status">Marital Status</label>
                                         <div class="col-md-9">
                                             <select name="contact1Status" id = "contact1Status" class = "form-control">
-                                                <option value="Married">Mother</option>
-                                                <option value="Separated">Father</option>
-                                                <option value="Divorced">Guardian</option>
-                                                <option value="Single/Other">Emergency</option>
+                                                <option value="Married">Married</option>
+                                                <option value="Separated">Separated</option>
+                                                <option value="Divorced">Divorced</option>
+                                                <option value="Single/Other">Single/Other</option>
                                             </select>
                                         </div>
                                     </div>
+                                    
                                     <div class="form-group">
                                         <label class="col-md-3 control-label" for="contact1HomeNumber" >Home number</label>
                                         <div class="col-md-9">
@@ -132,6 +136,143 @@
                                             <textarea class="form-control" id="contact1Comment" name="contact1Comment" placeholder="Please enter your message here..." rows="5"></textarea>
                                         </div>
                                     </div>
+
+                <!-- Contact 2 input-->
+                            <legend class="text-center" >Contact 2 Information </legend>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label" for="contact2FirstName">Contact First Name</label>
+                                <div class="col-md-9">
+                                    <input type = "text" name = "contact2FirstName" id = "contact2FirstName" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label" for="contact2LastName">Contact Last Name</label>
+                                <div class="col-md-9">
+                                    <input type = "text" name = "contact2LastName" id = "contact2LastName" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label" for="contact2Relationship">Relationship to Student</label>
+                                <div class="col-md-9">
+                                    <select name="contact2Relationship" id = "contact2Relationship" class = "form-control">
+                                        <option value="Mother">Mother</option>
+                                        <option value="Father">Father</option>
+                                        <option value="Guardian">Guardian</option>
+                                        <option value="Emergency">Emergency</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label" for="contact2Status">Marital Status</label>
+                                <div class="col-md-9">
+                                    <select name="contact2Status" id = "contact2Status" class = "form-control">
+                                        <option value="Married">Married</option>
+                                        <option value="Separated">Separated</option>
+                                        <option value="Divorced">Divorced</option>
+                                        <option value="Single/Other">Single/Other</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-md-3 control-label" for="contact2HomeNumber" >Home number</label>
+                                <div class="col-md-9">
+                                    <input type = "text" name = "contact2HomeNumber" id = "contact2HomeNumber" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label" for="contact2MobileNumber" >Mobile number</label>
+                                <div class="col-md-9">
+                                    <input type = "text" name = "contact2MobileNumber" id = "contact2MobileNumber" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label" for="contact2Occupation" >Occupation</label>
+                                <div class="col-md-9">
+                                    <input type = "text" name = "contact2Occupation" id = "contact2Occupation" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label" for="contact2Company" >Company</label>
+                                <div class="col-md-9">
+                                    <input type = "text" name = "contact2Company" id = "contact2Company" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label" for="contact2Comment">Comments</label>
+                                <div class="col-md-9">
+                                    <textarea class="form-control" id="contact2Comment" name="contact2Comment" placeholder="Please enter your message here..." rows="5"></textarea>
+                                </div>
+                            </div>
+
+                <!-- Emergency Contact input-->
+            <legend class="text-center" >Emergency Contact Information </legend>
+            <div class="form-group">
+                <label class="col-md-3 control-label" for="contact3FirstName">Contact First Name</label>
+                <div class="col-md-9">
+                    <input type = "text" name = "contact3FirstName" id = "contact3FirstName" class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-3 control-label" for="contact3LastName">Contact Last Name</label>
+                <div class="col-md-9">
+                    <input type = "text" name = "contact3LastName" id = "contact3LastName" class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-3 control-label" for="contact3Relationship">Relationship to Student</label>
+                <div class="col-md-9">
+                    <select name="contact3Relationship" id = "contact3Relationship" class = "form-control">
+                        <option value="Mother">Mother</option>
+                        <option value="Father">Father</option>
+                        <option value="Guardian">Guardian</option>
+                        <option value="Emergency">Emergency</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-3 control-label" for="contact3Status">Marital Status</label>
+                <div class="col-md-9">
+                    <select name="contact3Status" id = "contact3Status" class = "form-control">
+                        <option value="Married">Married</option>
+                        <option value="Separated">Separated</option>
+                        <option value="Divorced">Divorced</option>
+                        <option value="Single/Other">Single/Other</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-3 control-label" for="contact3HomeNumber" >Home number</label>
+                <div class="col-md-9">
+                    <input type = "text" name = "contact3HomeNumber" id = "contact3HomeNumber" class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-3 control-label" for="contact3MobileNumber" >Mobile number</label>
+                <div class="col-md-9">
+                    <input type = "text" name = "contact3MobileNumber" id = "contact3MobileNumber" class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-3 control-label" for="contact3Occupation" >Occupation</label>
+                <div class="col-md-9">
+                    <input type = "text" name = "contact3Occupation" id = "contact3Occupation" class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-3 control-label" for="contact3Company" >Company</label>
+                <div class="col-md-9">
+                    <input type = "text" name = "contact3Company" id = "contact3Company" class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-3 control-label" for="contact3Comment">Comments</label>
+                <div class="col-md-9">
+                    <textarea class="form-control" id="contact3Comment" name="contact3Comment" placeholder="Please enter your message here..." rows="5"></textarea>
+                </div>
+            </div>
+
                                     <div class="form-group">
                                         <div class="col-md-12 text-right">
                                             <button type="submit" class="btn btn-primary btn-lg">Submit</button>
